@@ -10,7 +10,9 @@
 </head>
 <body>
     <div class="contanier">
+        <div class="weather-app-wrapper">
         <div class="weather-app">
+        <div class="overview">
         <h1>
         New York
         </h1>
@@ -22,10 +24,17 @@
                 Cloudy
             </li>
         </ul>
+    </div>
         <div class="row">
             <div class="col-6">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Cloudy"/>
-                10°C | °F
+                <div class="d-flex weather-temperature">
+                    <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Cloudy" id="icon" />
+                    <div>
+                      <strong id="temperature">10</strong
+                      ><span class="units">°C | <a href="#">°F</a> 
+                    </span>
+                    </div>
+                  </div>
             </div>
             <div class="col-6">
                 <ul>
@@ -40,8 +49,9 @@
                     </li>
                 </ul>
             </div>
-        </div>
-         <small>
+        </div>       
+    </div>
+    <small>
            <a href="https://github.com/horobiienko/Vanilla-wether-app.git"
            target="_blank">
            Open-source code</a>
