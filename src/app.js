@@ -25,28 +25,28 @@
         return `${day} ${hours}:${minutes}`;
       }
       
-   
-  
-
 function displayTemperature (response) {
-let temperatureElement = document.querySelector("#temperature");
-let cityElement = document.querySelector ("#city");
-let descriptionElement = document.querySelector ("#description");
-let humidityElement = document.querySelector ("#humidity");
-let windElement = document.querySelector ("#wind");
-let todayElement = document.querySelector ("#today");
-temperatureElement.innerHTML = Math.round (response.data.main.temp);
-cityElement.innerHTML = response.data.name;
-descriptionElement.innerHTML = response.data.weather[0].description;
-humidityElement.innerHTML = response.data.main.humidity;
-windElement.innerHTML = Math.round(response.data.wind.speed);
-todayElement.innerHTML = formatDate (response.data.dt * 1000);
-console.log (response.data)
-}
+    let temperatureElement = document.querySelector("#temperature");
+    let cityElement = document.querySelector ("#city");
+    let descriptionElement = document.querySelector ("#description");
+    let humidityElement = document.querySelector ("#humidity");
+    let windElement = document.querySelector ("#wind");
+    let todayElement = document.querySelector ("#today");
+    let iconElement = document.querySelector ("#icon");
 
-let apiKey = "d5cc6a4c9a606dc61bc511b225dae4e0";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
+    temperatureElement.innerHTML = Math.round (response.data.main.temp);
+    cityElement.innerHTML = response.data.name;
+    descriptionElement.innerHTML = response.data.weather[0].description;
+    humidityElement.innerHTML = response.data.main.humidity;
+    windElement.innerHTML = Math.round(response.data.wind.speed);
+    todayElement.innerHTML = formatDate (response.data.dt * 1000);
+    iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.wether[o].icon}@2x.png`);
+    iconElement.setAttribute("alt", response.data.weather[0].description);
+  }
 
 
+    let apiKey = "e75cd5373d03e203b8c526d090475069";
+    let city = "London";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+    axios.get(apiUrl).then(displayTemperature);
