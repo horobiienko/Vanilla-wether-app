@@ -157,5 +157,5 @@ function getForecast(coordinates) {
   celsiusLink.addEventListener("click", displayCelsiusTemperature);
   
  
-  search("New York");
+  search("London");
   

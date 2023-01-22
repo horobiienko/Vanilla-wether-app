@@ -3,9 +3,10 @@ body {
 }
 
 h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color:  #E96D4C;
     display: block;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 100;
     line-height: 28px;
     margin-bottom: 0;
@@ -31,6 +32,7 @@ li {
 .weather-app-wrapper {
     max-width: 600px;
     margin: 30px auto;
+    background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
 }
 .weather-app {
     padding: 20px;
@@ -53,7 +55,6 @@ li {
     font-size: 64px;
     font-weight: 400;
     line-height: 1;
-    
 }
 
 .weather-temperature .units {
